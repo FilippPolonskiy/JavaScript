@@ -1,0 +1,11 @@
+const dolphinsScore = 97 + 93 + 101;
+const koalaScore = 97 + 92 + 101;
+const avgDolphin = dolphinsScore / 3;
+const avgKoala = koalaScore / 3;
+
+if (avgDolphin > avgKoala && avgDolphin > 100) {
+    console.log(`Dolphins won with the average of ${avgDolphin}. Koalas suck it`)
+} else if (avgDolphin < avgKoala && avgKoala > 100) {
+    console.log(`Koalas won with the average of ${avgKoala}. Dolphins suck it`)
+} else if (avgDolphin === avgKoala && avgDolphin > 100) {
+    console.log(`relax, it's a draw`)
