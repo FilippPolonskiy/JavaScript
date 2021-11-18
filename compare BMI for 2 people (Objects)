@@ -1,0 +1,28 @@
+const Mark = {
+    firstName: "Mark",
+    lastName: "Miller",
+    height: 1.69,
+    weight: 78,
+    calcBMI: function () {
+        return this.weight / (this.height ** 2);
+    }
+
+};
+const John = {
+    firstName: "John",
+    lastName: "Smith",
+    weight: 92,
+    height: 1.95,
+    calcBMI: function () {
+        return this.weight / (this.height ** 2);
+    }
+
+};
+
+if (Mark.calcBMI() > John.calcBMI()) {
+    console.log(`Mark's BMI (${Mark.calcBMI()}) is higher than Johns (${John.calcBMI()})`)
+} else if (Mark.calcBMI() < John.calcBMI()) {
+    console.log(`John's BMI (${John.calcBMI()}) is higher than Mark's (${Mark.calcBMI()})`)
+} else {
+    console.log(`John's BMI (${John.calcBMI()}) is equal to Mark's (${Mark.calcBMI()})`)
+}
