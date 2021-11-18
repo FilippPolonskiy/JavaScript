@@ -1,0 +1,16 @@
+function calcTip(bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * 0.15;
+    } else {
+        return bill * 0.2;
+    }
+}
+const bills = new Array(125, 555, 44);
+const tip1 = calcTip(bills[0]);
+const tip2 = calcTip(bills[1]);
+const tip3 = calcTip(bills[2]);
+const tips = new Array(tip1, tip2, tip3);
+const total = new Array(Number((bills[0] + tip1)), Number((bills[1] + tip2)), Number((bills[2] + tip3)));
+console.log(tip1, tip2, tip3);
+console.log(tips);
+console.log(total)
