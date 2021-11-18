@@ -1,0 +1,21 @@
+const jonas = [
+    'Jonas',
+    'Schmedtman',
+    2021 - 1997,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+];
+
+
+console.log(`only strings`);
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] !== 'string') continue;
+    console.log(jonas[i], typeof (jonas[i]));
+
+}
+
+
+console.log(`break when number`);
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === 'number') break;
+    console.log(jonas[i], typeof (jonas[i]));
