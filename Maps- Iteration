@@ -1,0 +1,28 @@
+const question = new Map([
+  ['question', 'What is the best Programming language in the world'],
+  [1, 'C'],
+  [2, 'Python'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'correct✅'],
+  [false, 'Try again shitty pants'],
+]);
+console.log(question);
+
+//Convert Object to Maps
+console.log(Object.entries('hours'));
+const hoursMap = new Map(Object.entries('hours'));
+
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer${key}: ${value}`);
+}
+
+const answer = Number(prompt('What is your answer?'));
+
+console.log(question.get(question.get('correct'))) === answer;
+
+console.log([...question]);
+
+console.log([...question.keys()]);
+console.log([...question.values()]);
