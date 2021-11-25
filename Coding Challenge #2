@@ -1,0 +1,65 @@
+const scored = ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'];
+
+const odds = {
+  team1: 1.33,
+  draw: 3.25,
+  team2: 6.5,
+};
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored,
+  odds,
+  date: 'Nov 9th, 2037',
+};
+
+const playersScored = Object.entries(scored);
+for (const [number, name] of playersScored) {
+  console.log(`Goal ${Number(number) + 1} scored by ${name}`);
+}
+
+const averageOdds = Object.entries(odds);
+
+console.log(averageOdds);
+
+let sum = 0;
+for (const [outcome, odd] of averageOdds) {
+  sum += odd;
+}
+console.log(`Average odds are ${sum / 3}`);
+
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamSTR = team === 'x' ? 'draw' : `victory ${game.team}`;
+  console.log(`Odds of ${teamSTR} to win are ${odd}`);
+}
