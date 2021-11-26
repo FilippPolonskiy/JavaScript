@@ -1,0 +1,91 @@
+'use strict'
+const airline = 'TAP AIR Portugal';
+
+const checkMiddleSeat = function (seat) {
+  //B and E are the middle seats
+  const s = seat.slice(-1);
+  console.log(seat.slice(-1));
+  if (s === 'B' || s === 'E') {
+    console.log('you got middle seat');
+  }
+};
+
+console.log(airline.toUpperCase());
+console.log(airline.toLowerCase());
+const passenger = 'jOnAs';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+//get rid of whitespacing
+let email = ' FIlipp120697@gmail.com';
+email = email.trim();
+console.log(email);
+
+//Replacing
+const priceGB = '288,97£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement =
+  'All passengers come to boarding door 23. Boarding door 23!';
+console.log(announcement.replaceAll('door', 'gate'));
+//above is equal to below:
+console.log(announcement.replace(/door/g, 'gate'));
+
+const plane = 'A320';
+console.log(plane.includes('320'));
+console.log(plane.startsWith('320'));
+console.log(plane.endsWith('320'));
+
+const checkBuggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log(`You're not allowed on boards`);
+  } else {
+    console.log(`Welcome aboard`);
+  }
+};
+
+checkBuggage('got some snacks and a gun for protection');
+checkBuggage('Got my Knifa and a bank of coke');
+
+//SPLIT
+console.log('a+very+nice+string'.split('+'));
+
+const [firstName, lastName] = 'Filipp Polonskiy'.split(' ');
+console.log([firstName, lastName]);
+
+//Join
+const newName = ['MR.', firstName, lastName].join(' ');
+
+//Capitalise
+const capitaliseName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+};
+capitaliseName('jessiaca ann smith davies');
+
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+').padEnd(35, '!'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  console.log(last.padStart(str.length, '*'));
+};
+
+maskCreditCard(5439757827861);
+
+const message2 = 'Bad weather... All departures delayed ';
+console.log(message2.repeat(5));
+
+const plainsInLine = function (n) {
+  console.log(`There are ${n} plains in line ${'🚀'.repeat(n)}`);
+};
+plainsInLine(5);
