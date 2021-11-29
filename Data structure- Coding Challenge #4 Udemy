@@ -1,0 +1,13 @@
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+document.querySelector('button').addEventListener('click', function () {
+  let f = document.querySelector('textarea').value.split('\n');
+  for (const variable of f) {
+    let variableLower = variable.trim().toLowerCase();
+    let newArray = variableLower.split('_');
+    let camelCase =
+      newArray[0] + newArray[1][0].toUpperCase() + newArray[1].slice(1);
+    console.log(`\n ${camelCase} ${'✅'.repeat(f.indexOf(variable) + 1)} `);
+  }
+});
