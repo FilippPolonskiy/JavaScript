@@ -1,0 +1,56 @@
+//Slice
+let arr = ['a', 'b', 'c', 'd', 'e'];
+console.log(arr.slice(2));
+console.log(arr.slice(2, 4));
+
+//SPLICE - mutates original array
+console.log(arr.splice(2));
+
+//Reverse - mutates original array
+const arr2 = ['j', 'i', 'h', 'g', 'f'];
+console.log(arr2.reverse());
+console.log(arr2);
+
+//CONCAT
+const letters = arr.concat(arr2);
+console.log(letters);
+console.log([...arr, ...arr2]);
+
+//JOIN
+console.log(letters.join('-'));
+
+arr = [23, 11, 64];
+console.log(arr.at(0));
+console.log('filipp'.at(0));
+
+//ForEach method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+
+console.log('-------------FOREACH-------------');
+
+movements.forEach(function (movement, index, array) {
+  if (movement > 0) {
+    console.log(`Movement ${index}: You deposited ${movement}`);
+  } else {
+    console.log(`Movement ${index}: You withdrew ${Math.abs(movement)}`);
+  }
+});
+
+//ForEach with MAP
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+currencies.forEach(function (value, key, Map) {
+  console.log(`${key}: ${value}`);
+});
+
+//ForEach with SET
+const currenciesUnique = new Set(['USD', 'EUR', 'GBP', 'EUR']);
+
+currenciesUnique.forEach(function (value1, _, Map1) {
+  console.log(`${value1}: ${value1}`);
+});
