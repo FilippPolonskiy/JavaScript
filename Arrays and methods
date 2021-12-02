@@ -90,6 +90,17 @@ const max = movements.reduce(function (acc, mov) {
 console.log(max);
 
 
+
+//Chaining Method
+
+const euroToUsd = 1.1;
+const totalDepositInUsd = movements
+  .filter(mov => mov > 0)
+  .map(mov => mov * euroToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(totalDepositInUsd);
+
 /* 
 Coding Challenge #2
 Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
