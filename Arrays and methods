@@ -29,3 +29,27 @@ console.log(years.includes(1992));
 
 if (years.includes(1992){
     console.log(`it's present`)
+
+//MAP Method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const euroToUds = 1.1;
+
+// const movementsUsd = movements.map(function (mov) {
+//   return mov * euroToUds;
+// });
+
+// console.log(movements);
+
+const movementsUsd = movements.map(mov => mov * euroToUds);
+console.log(movementsUsd);
+
+const movementDescrptions = movements.map((mov, i) => {
+  console.log(
+    `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+      mov
+    )}`
+  );
+});
+
+console.log(movementDescrptions);
