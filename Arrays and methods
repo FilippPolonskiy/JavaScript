@@ -186,6 +186,33 @@ movements.sort((a, b) => {
 movements.sort((a, b) => b - a);
 
 
+//Sorting Arrays
+
+//Create array
+const x = new Array(7);
+console.log(x);
+
+//FILL method
+x.fill(1, 3, 5);
+console.log(x);
+
+//Array.from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+
+console.log(z);
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', ''))
+  );
+  console.log(movementsUI);
+});
+
+
 /* 
 Coding Challenge #2
 Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
