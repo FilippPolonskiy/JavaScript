@@ -154,6 +154,38 @@ const overallBalance2 = accounts
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overallBalance2);
 
+
+//Sorting Arrays
+
+//Strings
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+console.log(owners.sort());
+
+//Numbers
+console.log(movements);
+
+//Return >0 a before b (keep order)
+//if return <0 b before a (switch order)
+
+//Ascending
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (b > a) return -1;
+});
+
+//Below is the same
+movements.sort((a, b) => a - b);
+
+//Descending
+movements.sort((a, b) => {
+  if (a > b) return -1;
+  if (b > a) return 1;
+});
+
+//Below is the same
+movements.sort((a, b) => b - a);
+
+
 /* 
 Coding Challenge #2
 Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
