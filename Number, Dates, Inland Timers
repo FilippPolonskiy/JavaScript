@@ -48,3 +48,20 @@ console.log((2.7).toFixed(0));
 
 //The remainder operation
 console.log(5 % 2);
+
+
+//New Date
+const now = new Date();
+console.log(now);
+console.log(new Date(account1.movementsDates[0]));
+console.log(new Date(2022, 12, 10));
+
+//Working with dates
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(future);
+console.log(future.getFullYear());
+future.toISOString();
+console.log(future.getTime);
+
+//current time stamp
+console.log(Date.now());
