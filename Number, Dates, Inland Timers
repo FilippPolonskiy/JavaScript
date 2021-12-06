@@ -44,3 +44,7 @@ console.log(Math.floor(23.3));
 
 //Rounding decimal
 console.log((2.7).toFixed(0));
+
+
+//The remainder operation
+console.log(5 % 2);
