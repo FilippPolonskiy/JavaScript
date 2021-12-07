@@ -98,3 +98,17 @@ labelDate.textContent = new Intl.DateTimeFormat('en-GB').format(now);
       currentAccount.locale,
       options
     ).format(now);
+
+//Number internationalisation
+const options = {
+  style: 'unit',
+  unit: 'mile-per-hour',
+  currency: 'EUR',
+  // useGrouping: false,
+};
+
+const num = 32423243.5;
+console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
+console.log('Germany: ', new Intl.NumberFormat('de-DE', options).format(num));
+console.log('Syria: ', new Intl.NumberFormat('ar-SY', options).format(num));
+console.log(navigator.language, new Intl.NumberFormat('en-US').format(num));
