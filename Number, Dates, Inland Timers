@@ -79,3 +79,22 @@ console.log(days1);
 //Styling the date based on the Country format
 const now = new Date();
 labelDate.textContent = new Intl.DateTimeFormat('en-GB').format(now);
+
+
+    //Create current date
+    const now = new Date();
+    const options = {
+      hour: 'numeric',
+      minute: 'numeric',
+      day: 'numeric',
+      month: 'numeric',
+      year: 'numeric',
+    };
+
+    const locale = navigator.language;
+    console.log(locale);
+
+    labelDate.textContent = new Intl.DateTimeFormat(
+      currentAccount.locale,
+      options
+    ).format(now);
