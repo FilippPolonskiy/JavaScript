@@ -19,3 +19,19 @@ const jack = new Person('Jack', 1993);
 
 console.log(matilla, jack);
 console.log(jonas instanceof Person);
+
+//Prototypes
+Person.prototype.calcAge = function () {
+  console.log(2021 - this.birthYear);
+};
+
+jonas.calcAge();
+
+console.log(jonas.__proto__);
+console.log(Person.prototype.isPrototypeOf(jonas));
+
+//.prototypeOfLinkedObjects
+Person.prototype.species = 'Homo Sapiens';
+console.log(jonas.species, matilla.species);
+console.log(jonas.hasOwnProperty('firstName'));
+console.log(jonas.hasOwnProperty('species'));
