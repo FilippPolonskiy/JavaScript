@@ -77,6 +77,30 @@ account.latest = 50;
 console.log(account.movements);
 
 
+//Object. create
+const PersonProto = {
+  calcAge() {
+    console.log(2021 - this.birthYear);
+  },
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const steven = Object.create(PersonProto);
+steven.name = 'Steven';
+steven.birthYear = 1999;
+steven.calcAge();
+
+console.log(steven.__proto__);
+const sarah = Object.create(PersonProto);
+sarah.init('Sarah', 1997);
+sarah.calcAge();
+
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
 // Coding Challenge #1
 
 /* 
