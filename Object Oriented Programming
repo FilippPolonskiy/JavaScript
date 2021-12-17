@@ -67,3 +67,26 @@ const Mercedes = new Car('Mercedes', 95);
 
 BMW.brake();
 Mercedes.accelerate();
+
+// Class Declaration
+class PersonCL {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+  //Methods would be added to .prototype property
+  calcAge() {
+    console.log(2021 - this.birthYear);
+  }
+  greet() {
+    console.log(`hey, ${this.firstName}`);
+  }
+}
+
+const jessica = new PersonCL('Jessica', 1996);
+
+jessica.greet();
+
+//1. Classes are not HOISTED
+// 2. Classes are first-class citizens
+//3. Calsses are executed in strict-mode
